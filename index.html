@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAZO | The King of Mangoes</title>
+    <meta name="description" content="Indulge in the rich, creamy goodness of MAZO. Premium mango pulp drinks crafted from the finest Alphonso mangoes. Pure tropical bliss in every sip.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="mazo-logo.webp" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="progress-bar"></div>
+
+    <div id="loader">
+        <div class="loader-content">
+            <img src="mazo-logo.webp" alt="MAZO" class="loader-logo">
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+            <p>Harvesting the finest Alphonso mangoes...</p>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <img src="mazo-logo.webp" alt="MAZO" class="logo">
+        <div class="nav-links">
+            <a href="#" style="display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                Our Story
+            </a>
+            <a href="#" style="display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                The Mangoes
+            </a>
+            <a href="#" style="display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Craftsmanship
+            </a>
+            <a href="#gallery" style="display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                Gallery
+            </a>
+            <a href="#contact" class="btn-primary">Order Now</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#" style="display: flex; align-items: center; gap: 0.8rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+            Our Story
+        </a>
+        <a href="#" style="display: flex; align-items: center; gap: 0.8rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            The Mangoes
+        </a>
+        <a href="#" style="display: flex; align-items: center; gap: 0.8rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Craftsmanship
+        </a>
+        <a href="#gallery" style="display: flex; align-items: center; gap: 0.8rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            Gallery
+        </a>
+        <a href="#contact" class="btn-primary">Order Now</a>
+    </div>
+
+    <div id="main">
+        <div class="canvas-container">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+
+        <div class="sections-wrapper">
+            <section class="section hero" id="section1">
+            <div class="content">
+                <div class="hero-title">
+                    <h1 class="reveal-text">The King's</h1>
+                    <h1 class="reveal-text accent">Choice</h1>
+                </div>
+                <p class="reveal-subtext" style="width: 85%;">Pressed from the finest Alphonso mangoes. Pure royalty in every drop.</p>
+                <div class="scroll-indicator reveal-subtext">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <span>Scroll to Discover</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="section2">
+            <div class="content left">
+                <h2 class="reveal-text">100% Natural</h2>
+                <h2 class="reveal-text accent">Pulp</h2>
+                <p class="reveal-subtext">No artificial flavors. No preservatives. Just the rich, velvety essence of handpicked mangoes.</p>
+            </div>
+        </section>
+
+        <section class="section" id="section3">
+            <div class="content right">
+                <h2 class="reveal-text">Crafted with</h2>
+                <h2 class="reveal-text accent">Precision</h2>
+                <p class="reveal-subtext">Our unique cold-press technology locks in the freshness and nutrients of tropical perfection.</p>
+            </div>
+        </section>
+
+        <section class="section" id="section4">
+            <div class="content center">
+                <h2 class="reveal-text">Taste the</h2>
+                <h2 class="reveal-text accent">Difference</h2>
+                <p class="reveal-subtext">MAZO isn't just a drink—it's an experience of pure mango indulgence.</p>
+            </div>
+        </section>
+
+        <section class="section footer-section" id="section5">
+            <div class="glass-card">
+                <h3 class="reveal-text">Ready for Royalty?</h3>
+                <p class="reveal-subtext">Order your MAZO today and elevate your senses to new heights.</p>
+                <div class="footer-cta reveal-subtext">
+                    <a href="#contact" class="btn-glow">Order Now</a>
+                    <a href="#benefits" class="btn-outline">Benefits</a>
+                </div>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <div class="normal-website-view">
+        <section class="normal-section grid-section">
+            <div class="section-heading text-center">
+                <h2 class="reveal-text">More from <span class="accent">MAZO</span></h2>
+                <p class="reveal-subtext" style="margin: 0 auto; max-width: 600px;">Discover our premium range of mango delights.</p>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="webpimages/00030.webp" alt="Pure Pulp">
+                    </div>
+                    <h3>Pure Pulp</h3>
+                    <p>100% natural, no preservatives.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="webpimages/00090.webp" alt="Mango Nectar">
+                    </div>
+                    <h3>Mango Nectar</h3>
+                    <p>A refreshing twist on a classic.</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="webpimages/00140.webp" alt="Premium Blend">
+                    </div>
+                    <h3>Premium Blend</h3>
+                    <p>Our signature rich consistency.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="normal-section split-section">
+            <div class="split-image">
+                <img src="webpimages/00180.webp" alt="Farm to Bottle">
+            </div>
+            <div class="split-content">
+                <h2 class="reveal-text">From Farm to <span class="accent">Bottle</span></h2>
+                <p class="reveal-subtext">Every step of our process is carefully monitored to ensure only the highest quality mangoes make it into your bottle. We work directly with farmers who share our passion for excellence.</p>
+                <div class="reveal-subtext" style="margin-top: 2rem;">
+                    <a href="#" class="btn-outline">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="normal-section text-center" style="background: rgba(255, 159, 28, 0.05);">
+            <div class="section-heading">
+                <h2 class="reveal-text">Why Choose <span class="accent">MAZO?</span></h2>
+                <p class="reveal-subtext" style="margin: 0 auto; max-width: 600px;">Experience the benefits of pure, unadulterated nature.</p>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+                <div class="benefit-card" style="flex: 1; min-width: 250px; padding: 2rem; border-radius: 20px; background: var(--glass); border: 1px solid var(--glass-border);">
+                    <svg style="color: var(--primary); margin-bottom: 1.5rem;" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">100% Organic</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-dim);">Grown without synthetic pesticides or fertilizers. Pure nature in every sip.</p>
+                </div>
+                <div class="benefit-card" style="flex: 1; min-width: 250px; padding: 2rem; border-radius: 20px; background: var(--glass); border: 1px solid var(--glass-border);">
+                    <svg style="color: var(--primary); margin-bottom: 1.5rem;" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Heart Healthy</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-dim);">Packed with essential vitamins, minerals, and antioxidants to boost immunity.</p>
+                </div>
+                <div class="benefit-card" style="flex: 1; min-width: 250px; padding: 2rem; border-radius: 20px; background: var(--glass); border: 1px solid var(--glass-border);">
+                    <svg style="color: var(--primary); margin-bottom: 1.5rem;" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Pure Extract</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-dim);">Cold-pressed to maintain the authentic flavor and rich consistency.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="normal-section">
+            <div class="section-heading text-center">
+                <h2 class="reveal-text">Visual <span class="accent">Splendor</span></h2>
+                <p class="reveal-subtext" style="margin: 0 auto; max-width: 600px;">A glimpse into the premium craftsmanship and pure essence of MAZO.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="webpimages/00192.webp" alt="MAZO Pure Gold">
+                    <div class="gallery-overlay">
+                        <h3>Golden Essence</h3>
+                        <p>Harvested at peak perfection</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/mango-bottle-1.webp" alt="MAZO Bottle Close-up">
+                    <div class="gallery-overlay">
+                        <h3>The Bottle</h3>
+                        <p>Designed for royalty</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/mango-bottle-2.webp" alt="MAZO Pouring">
+                    <div class="gallery-overlay">
+                        <h3>Rich Texture</h3>
+                        <p>Thick, velvety consistency</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/mango-bottle-3.webp" alt="MAZO Freshness">
+                    <div class="gallery-overlay">
+                        <h3>Pure Extract</h3>
+                        <p>100% cold-pressed mangoes</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/mango-bottle-4.webp" alt="MAZO Sunset Glow">
+                    <div class="gallery-overlay">
+                        <h3>Tropical Glow</h3>
+                        <p>Sun-kissed Alphonso goodness</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="normal-section" style="position: relative;">
+            <div class="section-heading text-center">
+                <h2 class="reveal-text">Get in <span class="accent">Touch</span></h2>
+                <p class="reveal-subtext" style="margin: 0 auto; max-width: 600px;">Have questions or want to place a bulk order? We'd love to hear from you.</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-form-container glass-card-premium">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder=" " required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="button" class="btn-glow full-width">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-grid">
+                    <div class="info-card glass-card-premium">
+                        <div class="info-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="info-text">
+                            <h3>Visit Us</h3>
+                            <p>123 Mango Grove Road<br>Salem, Tamil Nadu 636001</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card glass-card-premium">
+                        <div class="info-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </div>
+                        <div class="info-text">
+                            <h3>Contact Info</h3>
+                            <p>hello@mazo.com<br>+91 98765 43210</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card glass-card-premium">
+                        <div class="info-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="info-text">
+                            <h3>Business Hours</h3>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat - Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="site-footer" style="padding-top: 6rem; padding-bottom: 2rem;">
+            <div style="display: flex; gap: 4rem; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; margin-bottom: 4rem;">
+                <div style="flex: 2; min-width: 250px;">
+                    <img src="mazo-logo.webp" alt="MAZO" class="footer-logo" style="max-width: 150px; margin-bottom: 1.5rem;">
+                    <p style="color: var(--text-dim); max-width: 300px;">Crafting the finest Alphonso mango pulp for connoisseurs around the world. Pure royalty in every drop.</p>
+                </div>
+                <div style="flex: 1; min-width: 150px;">
+                    <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif;">Quick Links</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem;">
+                        <li><a href="#" style="color: var(--text-dim); text-decoration: none; transition: color 0.3s;">Our Story</a></li>
+                        <li><a href="#benefits" style="color: var(--text-dim); text-decoration: none; transition: color 0.3s;">Benefits</a></li>
+                        <li><a href="#" style="color: var(--text-dim); text-decoration: none; transition: color 0.3s;">Products</a></li>
+                        <li><a href="#contact" style="color: var(--text-dim); text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 150px;">
+                    <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif;">Follow Us</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem;">
+                        <li><a href="#" style="color: var(--text-dim); text-decoration: none; transition: color 0.3s;">Instagram</a></li>
+                        <li><a href="#" style="color: var(--text-dim); text-decoration: none; transition: color 0.3s;">Facebook</a></li>
+                        <li><a href="#" style="color: var(--text-dim); text-decoration: none; transition: color 0.3s;">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-content text-center" style="border-top: 1px solid var(--glass-border); padding-top: 2rem;">
+                <p style="color: var(--text-dim);">© 2026 MAZO. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
