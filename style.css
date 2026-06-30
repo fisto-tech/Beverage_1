@@ -2,6 +2,7 @@
     --primary: #FF9F1C;
     --primary-dark: #E76F51;
     --bg-dark: #0a0a0a;
+    --bg-dark-alt: #16120e; /* A warm, premium dark amber/cocoa tone that complements the mango theme */
     --text-light: #ffffff;
     --text-dim: rgba(255, 255, 255, 0.7);
     --glass: rgba(255, 255, 255, 0.05);
@@ -445,6 +446,14 @@ p {
     padding: 6rem 8%;
 }
 
+.normal-section:nth-of-type(odd) {
+    background-color: var(--bg-dark);
+}
+
+.normal-section:nth-of-type(even) {
+    background-color: var(--bg-dark-alt);
+}
+
 .section-heading {
     margin-bottom: 4rem;
 }
@@ -516,7 +525,8 @@ p {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
-.split-image img {
+.split-image img,
+.split-image video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -880,6 +890,17 @@ p {
     .btn-glow, .btn-outline {
         width: 100%;
         padding: 1rem;
+    }
+
+    .split-section {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .split-image {
+        width: 100%;
+        height: 350px;
     }
 }
 

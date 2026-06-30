@@ -128,11 +128,19 @@ function initScrollAnimations() {
         
         const process = (node) => {
             if (node.nodeType === 3) { // Text node
-                const chars = node.textContent.split('').map(char => 
-                    `<span class="char" style="display:inline-block">${char === ' ' ? '&nbsp;' : char}</span>`
-                ).join('');
+                const text = node.textContent;
+                const words = text.split(/(\s+)/).map(part => {
+                    if (part.trim() === '') {
+                        return part; // Return spaces/whitespace as is
+                    }
+                    const chars = part.split('').map(char => 
+                        `<span class="char" style="display:inline-block">${char}</span>`
+                    ).join('');
+                    return `<span class="word-wrap" style="display:inline-block; white-space:nowrap">${chars}</span>`;
+                }).join('');
+                
                 const span = document.createElement('span');
-                span.innerHTML = chars;
+                span.innerHTML = words;
                 node.parentNode.replaceChild(span, node);
             } else if (node.nodeType === 1) { // Element node
                 Array.from(node.childNodes).forEach(process);

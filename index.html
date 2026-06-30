@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAZO | The King of Mangoes</title>
     <meta name="description" content="Indulge in the rich, creamy goodness of MAZO. Premium mango pulp drinks crafted from the finest Alphonso mangoes. Pure tropical bliss in every sip.">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -165,21 +165,26 @@
             </div>
         </section>
 
-        <section class="normal-section split-section">
-            <div class="split-image">
-                <img src="webpimages/00180.webp" alt="Farm to Bottle">
-            </div>
-            <div class="split-content">
-                <h2 class="reveal-text">From Farm to <span class="accent">Bottle</span></h2>
-                <p class="reveal-subtext">Every step of our process is carefully monitored to ensure only the highest quality mangoes make it into your bottle. We work directly with farmers who share our passion for excellence.</p>
-                <div class="reveal-subtext" style="margin-top: 2rem;">
-                    <a href="#" class="btn-outline">Learn More</a>
+        <section class="normal-section split-section-wrapper">
+            <div class="split-section">
+                <div class="split-image">
+                    <video autoplay loop muted playsinline>
+                        <source src="assets/videos/mango-website-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="split-content">
+                    <h2 class="reveal-text">From Farm to <span class="accent">Bottle</span></h2>
+                    <p class="reveal-subtext">Every step of our process is carefully monitored to ensure only the highest quality mangoes make it into your bottle. We work directly with farmers who share our passion for excellence.</p>
+                    <div class="reveal-subtext" style="margin-top: 2rem;">
+                        <a href="#" class="btn-outline">Learn More</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Benefits Section -->
-        <section id="benefits" class="normal-section text-center" style="background: rgba(255, 159, 28, 0.05);">
+        <section id="benefits" class="normal-section text-center">
             <div class="section-heading">
                 <h2 class="reveal-text">Why Choose <span class="accent">MAZO?</span></h2>
                 <p class="reveal-subtext" style="margin: 0 auto; max-width: 600px;">Experience the benefits of pure, unadulterated nature.</p>
@@ -344,6 +349,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- Lenis Smooth Scroll -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
